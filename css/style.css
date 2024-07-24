@@ -1,0 +1,70 @@
+body {
+	background-color: rgb(73, 45, 151);
+	color: white;
+}
+
+h1.titre {
+	font-size: 80px;
+	color: yellow;
+	margin: 5px;
+}
+
+h3.principe {
+	font-size: 40px;
+	margin-top: 5px;
+}
+
+div.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+div.cards {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	perspective: 1000px;
+}
+
+div.card {
+	transition: 1s;
+	width: 200px;
+	height: 300px;
+	margin: 10px;
+	transform-style: preserve-3d;
+}
+
+div.front,
+.back {
+	position: absolute;
+	backface-visibility: hidden;
+	height: 300px;
+}
+
+.front {
+	background: url(../images/black.png);
+	background-size: 200px;
+	width: 200px;
+	transform: rotateY(180deg)
+}
+
+.back {
+	background: url(../images/dos.png);
+	background-size: 200px;
+	width: 200px;
+}
+
+img.card-img {
+	width: 200px
+}
+
+.back:hover {
+	box-shadow: 0px 0px 20px 1px black;
+}
+
+button#btn {
+	font-size: 50px;
+	width: 30%;
+}
